@@ -1,0 +1,529 @@
+[
+    {
+        "id": 1,
+        "label": "ALL CATEGORIES",
+        "title": "ALL CATEGORIES",
+        "items": [],
+        "_links": {},
+        "key": 1,
+        "description": "All Categories",
+        "mobile": true,
+        "childs": true,
+        "primaries": [
+            {
+                "key": 29,
+                "description": "Building Supplies",
+                "url": "/t/building-supplies",
+                "childs": true,
+                "image": "fal fa-building",
+                "banner": {
+                    "id": "a6c873f6-7c03-4f6f-b48d-3d17d9840a0a",
+                    "bannercontainerCssClass": "",
+                    "name": "building_supplies",
+                    "bannerLink": "/c/building-supplies/doors_windows/access_doors_panels/roof_hatches",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/building-supplies",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><strong><span style='color:#ffffff;'>NO WAY TO THE ROOF? WE CAN HELP OPEN THAT DOOR.</span></strong></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-building-supplies.png/menubanner-building-supplies.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 30,
+                "description": "Carts & Trucks",
+                "url": "/t/carts-trucks",
+                "childs": true,
+                "image": "fa-light fa-forklift",
+                "banner": {
+                    "id": "cf303fb4-600a-4210-863c-58b9dc0db4ed",
+                    "bannercontainerCssClass": "",
+                    "name": "carts-trucks",
+                    "bannerLink": "/c/carts-trucks/pallet_trucks_jacks?p=category1_id=NW~brand=Global+Industrial",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/carts-trucks",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>NEED A \"PICK-ME-UP\"? OUR PALLET JACK TRUCKS DO JUST THAT.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-carts-trucks.png/menubanner-carts-trucks.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_yellow"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 20,
+                "description": "Fasteners & Hardware",
+                "url": "/t/fasteners",
+                "childs": true,
+                "image": "fal fa-screwdriver",
+                "banner": {
+                    "id": "60199f56-1c49-47ba-9af2-704cd9254ff9",
+                    "bannercontainerCssClass": "",
+                    "name": "fasteners",
+                    "bannerLink": "/c/fasteners/general_purpose_hardware/magnets",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/fasteners",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>MAGNETIC SOLUTIONS THAT STICK. WE CAN SUPPLY THAT.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-fasteners.png/menubanner-fasteners.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 17,
+                "description": "Foodservice & Retail",
+                "url": "/t/foodservice",
+                "childs": true,
+                "image": "fa-light fa-plate-utensils",
+                "banner": {
+                    "id": "af27f47f-196b-41df-a150-76497f14448b",
+                    "bannercontainerCssClass": "",
+                    "name": "foodservice",
+                    "bannerLink": "https://www.globalindustrial.com/c/foodservice/appliances/refrigerators_freezers",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/foodservice",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>THE COOLEST REFFRIGERATORS AND FREEZERS JUST MOVE TO OUR SITE.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-foodservice.png/menubanner-foodservice.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 11,
+                "description": "Furniture & Decor",
+                "url": "/t/office",
+                "childs": true,
+                "image": "fal fa-chair-office",
+                "banner": {
+                    "id": "c2b66b8d-55bc-4693-9a2b-ebc05f04e844",
+                    "bannercontainerCssClass": "",
+                    "name": "furniture--decor",
+                    "bannerLink": "/c/office/tables/picnic_tables",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/office",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>EVERY DAY IS A PICNIC WHEN YOU HAVE COMFORTABLE SEATING INSTALLED.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-furniture-decor.png/menubanner-furniture-decor.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_green"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 10,
+                "description": "HVAC & Fans",
+                "url": "/t/hvac",
+                "childs": true,
+                "image": "fal fa-fan-table",
+                "banner": {
+                    "id": "7ff19875-f750-4484-a19c-a3a123223565",
+                    "bannercontainerCssClass": "",
+                    "name": "hvac",
+                    "bannerLink": "/c/hvac/air_conditioners_chillers/industrial_commercial_portable_air_conditioners",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/hvac",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>THE BEST FANS KNOW HOW TO KEEP THEIR COOL.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-hvac.png/menubanner-hvac.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 13,
+                "description": "Janitorial & Facility Maintenance",
+                "url": "/t/janitorial-facility-maintenance",
+                "childs": true,
+                "image": "fal fa-trash",
+                "banner": {
+                    "id": "509ca96b-784e-4e83-9946-29cf3bea3868",
+                    "bannercontainerCssClass": "",
+                    "name": "janitorial",
+                    "bannerLink": "/c/janitorial-facility-maintenance/trash_recycling/trash_recycling_containers/outdoor_trash_cans",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/janitorial-facility-maintenance",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WE\"RE NOT TRAVEL AGENTS. BUT WE CAN HELP YOU WITH YOUR BUCKET LIST.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-janitorial.png/menubanner-janitorial.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 7,
+                "description": "Lighting & Electrical",
+                "url": "/t/electrical",
+                "childs": true,
+                "image": "fal fa-lightbulb-on",
+                "banner": {
+                    "id": "76d6e31e-c889-40ee-bc75-7d8cd3c9baa1",
+                    "bannercontainerCssClass": "",
+                    "name": "electrical",
+                    "bannerLink": "/c/electrical/surge_protectors_extension_cords/power_strips_outlet_taps",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/electrical",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WATT-EVER YOUR BUSINESS NEEDS POWER THROUGH. WE CAN SUPPLY THAT.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-electrical.png/menubanner-electrical.png/hippogallery:original'/></p>",
+                    "backgroundImageColor": "mobile_secondary_orange"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 31,
+                "description": "Machining",
+                "url": "/t/machining",
+                "childs": true,
+                "image": "fa-light fa-flux-capacitor",
+                "banner": {
+                    "id": "60360e7c-f2e3-46f5-92de-59c55398cfc0",
+                    "bannercontainerCssClass": "",
+                    "name": "machining",
+                    "bannerLink": "/t/machining",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/machining",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WE HAVE THE PRODUCTS TO MAKE YOUR BUSINESS SUCCESSFUL.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-machining.png/menubanner-machining.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_red"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 1,
+                "description": "Material Handling",
+                "url": "/t/material-handling",
+                "childs": true,
+                "image": "fal fa-pallet",
+                "banner": {
+                    "id": "82c32b4e-5a66-4023-b4a3-e03facfb6bbb",
+                    "bannercontainerCssClass": "",
+                    "name": "material-handling",
+                    "bannerLink": "/c/material-handling/lift_tables_work_positioners/pallet_carousels_positioners",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/material-handling",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WE\"RE DON’T JUST SELL PALLET CAROUSELS. WE SELL ONES THAT HELP WITH EFFICIENCY.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-material-handling.png/menubanner-material-handling.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 22,
+                "description": "Medical &  Laboratory",
+                "url": "/t/medical-lab",
+                "childs": true,
+                "image": "fal fa-hospital-user",
+                "banner": {
+                    "id": "d78424a1-0b4c-4cd1-983b-6514d3cac745",
+                    "bannercontainerCssClass": "",
+                    "name": "medical-lab",
+                    "bannerLink": "/t/medical-lab",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/medical-lab",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WE CAN HELP YOU WITH THE MEDICAL AND LAB SUPPLIES YOU NEED.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-medical.png/menubanner-medical.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 18,
+                "description": "Motors & Power Transmission",
+                "url": "/t/motors_power_transmission",
+                "childs": true,
+                "image": "fal fa-cogs",
+                "banner": {
+                    "id": "2b920baa-c21b-4a6b-b361-28cdec5c88d9",
+                    "bannercontainerCssClass": "",
+                    "name": "motors_power_transmission",
+                    "bannerLink": "/c/motors_power_transmission/air_compressors?p=category2_id=TBAC~brand=Global+Industrial",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/motors_power_transmission",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>AIR COMPRESSORS THAT BRING POWER TO YOUR TOOLS AND YOUR BUSINESS.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-motor-power.png/menubanner-motor-power.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 27,
+                "description": "Office & School Supplies",
+                "url": "/t/office-school-supply",
+                "childs": true,
+                "image": "fal fa-backpack",
+                "banner": {
+                    "id": "876b46c4-17e5-4230-b4c5-4262e6656c30",
+                    "bannercontainerCssClass": "",
+                    "name": "office-school-supply",
+                    "bannerLink": "/c/office-school-supply/boards_easels/dry_erase_whiteboards?p=category1_id=TL~category2_id=TLAC~brand=Global+Industrial",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/office-school-supply",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>NEED TO BE REMARKABLE? WE CAN SUPPLY THAT.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-office-school-supplies.png/menubanner-office-school-supplies.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 4,
+                "description": "Packaging & Shipping",
+                "url": "/t/packaging",
+                "childs": true,
+                "image": "fal fa-truck",
+                "banner": {
+                    "id": "3be9eafd-095b-439a-baee-9b5bdadc4683",
+                    "bannercontainerCssClass": "",
+                    "name": "packaging",
+                    "bannerLink": "/c/packaging/packing_equipment/wrapping_equipment/stretch_wrap_dispensers_accessories",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/packaging",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WE DO GIVE A FRESH TAKE ON THAT'S A WRAP.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-packaging.png/menubanner-packaging.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_yellow"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 9,
+                "description": "Plumbing & Pumps",
+                "url": "/t/plumbing",
+                "childs": true,
+                "image": "fal fa-wrench",
+                "banner": {
+                    "id": "d3150339-822d-4727-8f3a-99bca04c2b69",
+                    "bannercontainerCssClass": "",
+                    "name": "plumbing",
+                    "bannerLink": "/c/plumbing/drinking_fountains_bottle_fillers_water_coolers/water_bottle_filling_stations",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/plumbing",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WE DON'T SELL THE FOUNTAIN OF YOUTH. BUT OUR BOTTLE FILLERS ARE TIMELESS.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-plumbing-pumps.png/menubanner-plumbing-pumps.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 23,
+                "description": "Raw Materials",
+                "url": "/t/building-materials",
+                "childs": true,
+                "image": "fal fa-cube",
+                "banner": {
+                    "id": "69f18596-9f62-43ee-9cd3-796eb4c16d8e",
+                    "bannercontainerCssClass": "",
+                    "name": "building-materials",
+                    "bannerLink": "/t/building-materials",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/building-materials",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>LOREM IPSUM DOLOR SIT AMET . WE CAN SUPPLY THAT.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-rawmaterials.png/menubanner-rawmaterials.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 5,
+                "description": "Safety & Security",
+                "url": "/t/safety",
+                "childs": true,
+                "image": "fal fa-user-hard-hat",
+                "banner": {
+                    "id": "8e587cd0-962b-4d5f-b3e4-d5b5bf811554",
+                    "bannercontainerCssClass": "",
+                    "name": "safety",
+                    "bannerLink": "/c/safety/traffic_crowd_control",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/safety",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>WE DON’T SUPPLY LIVESTOCK.BUT WE CAN CORRAL YOUR CROWDS.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-safety-security.png/menubanner-safety-security.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_green"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 15,
+                "description": "Storage & Shelving",
+                "url": "/t/storage",
+                "childs": true,
+                "image": "fal fa-box",
+                "banner": {
+                    "id": "ef0867e2-8fc2-420f-ab5c-e4b42c9689a0",
+                    "bannercontainerCssClass": "",
+                    "name": "storage",
+                    "bannerLink": "/c/storage/containers_organizers/storage_totes_tubs",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/storage",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>STORAGE SO GOOD YOU WON\"T BE ABLE TO CONTAIN YOURSELF.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-storage.png/menubanner-storage.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_orange"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 19,
+                "description": "Tools & Instruments",
+                "url": "/t/tools",
+                "childs": true,
+                "image": "fa-light fa-screwdriver-wrench",
+                "banner": {
+                    "id": "584a3255-859a-406d-9677-38e0313e9fb4",
+                    "bannercontainerCssClass": "",
+                    "name": "tools",
+                    "bannerLink": "/c/tools/outdoor_tools_power_equipment",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/tools",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>LET THE FORCE OF OUR POWER TOOLS BE WITH YOU.</span></p>\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-tools.png/menubanner-tools.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_yellow"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 25,
+                "description": "Vehicle Maintenance",
+                "url": "/t/vehicle-fleet-maintenance",
+                "childs": true,
+                "image": "fal fa-car",
+                "banner": {
+                    "id": "a55c060d-32e0-4f35-ba2e-c0c53d26b667",
+                    "bannercontainerCssClass": "",
+                    "name": "vehicle-fleet-maintenance",
+                    "bannerLink": "/t/vehicle-fleet-maintenance",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/vehicle-fleet-maintenance",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>NOT JUST HERE TO SELL PARTS. HERE TO HELP MAINTAIN YOUR RIDE.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-vm.png/menubanner-vm.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_secondary_yellow"
+                },
+                "taxonomyTypeKey": 1
+            },
+            {
+                "key": 16,
+                "description": "Workbenches & Shop Desks",
+                "url": "/t/work-benches",
+                "childs": true,
+                "image": "fa-light fa-container-storage",
+                "banner": {
+                    "id": "a5f29f05-5eef-4ef0-af48-a0fa401b2256",
+                    "bannercontainerCssClass": "",
+                    "name": "work-benches",
+                    "bannerLink": "/t/work-benches",
+                    "buttonText": "Shop Now",
+                    "bannerTargetUrl": "/work-benches",
+                    "buttonColor": "secondary-light",
+                    "backgroundColor": "",
+                    "bannerData": "<p><span style='color:#ffffff;'>OUR WORKBENCHES CARRY THE WEIGHT SO YOU DON’T HAVE TO.</span></p>\n\n<p><img src='https://develop-globalindustrial.onehippo.io/site/binaries/content/gallery/gicwebbrx/menu-banners/menubanner-work-benches.png/menubanner-work-benches.png/hippogallery:original' /></p>",
+                    "backgroundImageColor": "mobile_primary_blue"
+                },
+                "taxonomyTypeKey": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "label": "DEALS",
+        "title": "DEALS",
+        "items": [
+            {
+                "id": 0,
+                "label": "Free Shipping",
+                "description": "Free Shipping",
+                "link": "/freeshipping",
+                "url": "/freeshipping",
+                "linkType": "external"
+            },
+            {
+                "id": 1,
+                "label": "Clearance",
+                "description": "Clearance",
+                "link": "/inventoryClearance",
+                "url": "/inventoryClearance",
+                "linkType": "external"
+            }
+        ],
+        "_links": {},
+        "childs": true,
+        "primaries": [
+            {
+                "id": 0,
+                "label": "Free Shipping",
+                "description": "Free Shipping",
+                "link": "/freeshipping",
+                "url": "/freeshipping",
+                "linkType": "external"
+            },
+            {
+                "id": 1,
+                "label": "Clearance",
+                "description": "Clearance",
+                "link": "/inventoryClearance",
+                "url": "/inventoryClearance",
+                "linkType": "external"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "label": "EXCLUSIVE BRANDS",
+        "title": "EXCLUSIVE BRANDS",
+        "items": [],
+        "_links": {
+            "href": "/exclusive-brands",
+            "type": "external"
+        }
+    },
+    {
+        "id": 4,
+        "label": "KNOWLEDGE CENTER",
+        "title": "KNOWLEDGE CENTER",
+        "items": [],
+        "_links": {
+            "href": "https://www.globalindustrial.com/knowledge-center",
+            "type": "external"
+        }
+    },
+    {
+        "id": 5,
+        "label": "PUBLIC SECTOR",
+        "title": "PUBLIC SECTOR",
+        "items": [],
+        "_links": {
+            "href": "/public-sector",
+            "type": "external"
+        }
+    },
+    {
+        "id": 6,
+        "label": "NEW ARRIVALS",
+        "title": "NEW ARRIVALS",
+        "items": [],
+        "_links": {
+            "href": "/newArrivals",
+            "type": "external"
+        }
+    },
+    {
+        "id": 7,
+        "label": "QUICK ORDER",
+        "title": "QUICK ORDER",
+        "items": [],
+        "_links": {},
+        "key": 6,
+        "description": "Quick Order",
+        "mobile": true,
+        "childs": false
+    }
+]

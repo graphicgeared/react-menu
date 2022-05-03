@@ -1,209 +1,211 @@
-import Head from 'next/head'
+import { MenuAim, Menu, SubMenuPanel } from "react-multilevel-menu-aim";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCaretDown, faCaretRight} from "@fortawesome/free-solid-svg-icons";
+import JsonData from '../data/menu.json'
+import React, {useState, useEffect} from 'react'
 
-export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const arrowdown = <FontAwesomeIcon icon={faCaretDown} />
+const arrowright = <FontAwesomeIcon icon={faCaretRight} />
+const auth_key = 'BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJERVYifQ.uOFB7h7_Aw6jbA1HSqVJ44tKMO7E1ljz1kV_JddeKL64YCOH57-l1ZX2Lly-Jnhdnxk3xMAeW5FawAgymEaMKA'
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+function MyComponent() {
+        const [submenus, setSubmenu] = useState([])
+        const [submenuslvl, setSubmenulvl] = useState([])
+        const getData = (url) =>{
+            fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ url,{
+                method: "GET",
+                headers: {
+                    "Authorization": auth_key,
+                    "CLIENT_ID": "GEC"
+                }
+            }).then(response => {
+                return response.json()
+            }).then(results => {
+                    setSubmenu(results.primaries)
+            })
         }
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+        const getDatas = (urls) =>{
+
+            fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ urls,{
+                method: "GET",
+                headers: {
+                    "Authorization": auth_key,
+                    "CLIENT_ID": "GEC"
+                }
+            }).then(response => {
+                return response.json()
+            }).then(results => {
+                setSubmenulvl(results.primaries)
+            })
         }
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
 
-        footer img {
-          margin-left: 0.5rem;
-        }
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+        return (
+            <MenuAim>
+                <div className="menu">
+                    <ul style={{left: 10, top: 0}} className="lv1">
+                        {JsonData.map((info) => (
+                            <Menu key={info.title}>
+                                <li>
+                                    {info.childs || info.title == "QUICK ORDER" ? <a>{info.title} {arrowdown} </a> :
+                                        <a>{info.title} </a>}
+                                    {info.childs ?
+                                        <SubMenuPanel>
+                                            <ul className="lvn lv2">
+                                                {info.primaries.map((submenu) => (
+                                                    <Menu key={submenu.description}>
+                                                        <li onMouseOver={()=> getData(submenu.key+"?url="+submenu.url)}>
+                                                            {submenu.childs ? <a>{submenu.description} <span
+                                                                    className="icon">{arrowright}</span> </a> :
+                                                                <a>{submenu.description}</a>}
+                                                            {submenu.childs ?
+                                                                <SubMenuPanel>
+                                                                    <ul className="lvn">
+                                                                        {submenus.map((menuItem) => (
+                                                                            <Menu key={menuItem.description}>
+                                                                                <li onMouseOver={()=> getDatas(menuItem.key+"?url="+menuItem.url)}>
+                                                                                    {menuItem.childs ? <a>{menuItem.description} <span
+                                                                                            className="icon">{arrowright}</span> </a> :
+                                                                                        <a>{menuItem.description}</a>}
+                                                                                    {menuItem.childs ?
+                                                                                        <SubMenuPanel>
+                                                                                            <ul className="lvn">
+                                                                                                {submenuslvl.map((menuItemlvl) => (
+                                                                                                    <Menu key={menuItemlvl.description}>
+                                                                                                        <li>
+                                                                                                                <a>{menuItemlvl.description}</a>
+                                                                                                        </li>
+                                                                                                    </Menu>
+                                                                                                ))
+                                                                                                }
+                                                                                            </ul>
+                                                                                        </SubMenuPanel> :
+                                                                                        null
+                                                                                    }
+                                                                                </li>
+                                                                            </Menu>
+                                                                            ))
+                                                                        }
+                                                                    </ul>
+                                                                </SubMenuPanel> :
+                                                                null
+                                                            }
+                                                        </li>
+                                                    </Menu>
+                                                ))
+                                                }
+                                            </ul>
+                                        </SubMenuPanel> : null}
+                                </li>
+                            </Menu>
+                        ))}
+                    </ul>
+                    <style jsx>{`
+                      ul,
+                      li {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                      }
 
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
+                      ul.lv1 {
+                        position: absolute;
+                        clear: both;
+                        height: 40px;
+                        top: 40px;
+                        left: 0px;
+                        z-index: 100;
+                      }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
+                      ul.lv1 > li {
+                        float: left;
+                        width: auto;
+                        padding: 10px 20px;
+                        border: 1px solid blue;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        position: relative;
+                      }
 
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
+                      ul.lvn {
+                        position: absolute;
+                        text-align: left;
+                        top: -1px;
+                        width: 300px;
+                        left: 300px;
+                        z-index: 1000;
+                        height: 500px;
+                      }
+                      
+                      ul.lvn li{background: #ccc; padding: 2px 20px;}
+                      ul.lvn li:hover{background: #999;}
 
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
+                      ul.lv2 {
+                        top: 60px;
+                        left: 0px;
+                      }
 
-        .title,
-        .description {
-          text-align: center;
-        }
+                      ul.lvn > li a span.icon {
+                        float: right;
+                      }
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+                      .menu {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                      }
+                    `}</style>
+                </div>
+            </MenuAim>
+        );
 }
+
+
+ export default MyComponent;
+
+// const HoverableDiv = ({ handleMouseOver, handleMouseOut }) => {
+//     return (
+//         <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+//             Hover Me
+//         </div>
+//     );
+// };
+//
+// const HoverText = () => {
+//     return (
+//         <div>
+//             Hovering right meow!
+//             <span role="img" aria-label="cat">
+//         🐱
+//       </span>
+//         </div>
+//     );
+// };
+//
+// const HoverExample = () => {
+//     const [isHovering, setIsHovering] = useState(false);
+//     const handleMouseOver = () => {
+//         setIsHovering(true);
+//     };
+//
+//     const handleMouseOut = () => {
+//         setIsHovering(false);
+//     };
+//
+//     return (
+//         <div>
+//             {/* Hover over this div to hide/show <HoverText /> */}
+//             <HoverableDiv
+//                 handleMouseOver={handleMouseOver}
+//                 handleMouseOut={handleMouseOut}
+//             />
+//             {isHovering && <HoverText />}
+//         </div>
+//     );
+// };
+//
+// export default HoverExample
