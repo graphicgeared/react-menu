@@ -10,50 +10,51 @@ const auth_key = 'BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJERVYifQ.
 
 
 function MyComponent() {
-        const [submenus, setSubmenu] = useState([])
-        const [submenuslvl, setSubmenulvl] = useState([])
-        const getData = (url) =>{
-            fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ url,{
-                method: "GET",
-                headers: {
-                    "Authorization": auth_key,
-                    "CLIENT_ID": "GEC"
-                }
-            }).then(response => {
-                return response.json()
-            }).then(results => {
-                    setSubmenu(results.primaries)
-            })
-        }
+    const [submenus, setSubmenu] = useState([])
+    const [submenuslvl, setSubmenulvl] = useState([])
+    const getData = (url) =>{
+        fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ url,{
+            method: "GET",
+            headers: {
+                "Authorization": auth_key,
+                "CLIENT_ID": "GEC"
+            }
+        }).then(response => {
+            return response.json()
+        }).then(results => {
+            setSubmenu(results.primaries)
+        })
+    }
 
-        const getDatas = (urls) =>{
+    const getDatas = (urls) =>{
 
-            fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ urls,{
-                method: "GET",
-                headers: {
-                    "Authorization": auth_key,
-                    "CLIENT_ID": "GEC"
-                }
-            }).then(response => {
-                return response.json()
-            }).then(results => {
-                setSubmenulvl(results.primaries)
-            })
-        }
+        fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ urls,{
+            method: "GET",
+            headers: {
+                "Authorization": auth_key,
+                "CLIENT_ID": "GEC"
+            }
+        }).then(response => {
+            return response.json()
+        }).then(results => {
+            setSubmenulvl(results.primaries)
+        })
+    }
 
 
 
-        return (
-            <MenuAim>
-                <div className="menu">
-                    <ul style={{left: 10, top: 0}} className="lv1">
-                        {JsonData.map((info) => (
-                            <Menu key={info.title}>
-                                <li>
-                                    {info.childs || info.title == "QUICK ORDER" ? <a>{info.title} {arrowdown} </a> :
-                                        <a>{info.title} </a>}
-                                    {info.childs ?
-                                        <SubMenuPanel>
+    return (
+        <MenuAim>
+            <div className="menu">
+                <ul style={{left: 10, top: 0}} className="lv1">
+                    {JsonData.map((info) => (
+                        <Menu key={info.title}>
+                            <li>
+                                {info.childs || info.title == "QUICK ORDER" ? <a>{info.title} {arrowdown} </a> :
+                                    <a>{info.title} </a>}
+                                {info.childs ?
+                                    <SubMenuPanel>
+                                        <div className="wrapper">
                                             <ul className="lvn lv2">
                                                 {info.primaries.map((submenu) => (
                                                     <Menu key={submenu.description}>
@@ -63,33 +64,37 @@ function MyComponent() {
                                                                 <a>{submenu.description}</a>}
                                                             {submenu.childs ?
                                                                 <SubMenuPanel>
-                                                                    <ul className="lvn">
-                                                                        {submenus.map((menuItem) => (
-                                                                            <Menu key={menuItem.description}>
-                                                                                <li onMouseOver={()=> getDatas(menuItem.key+"?url="+menuItem.url)}>
-                                                                                    {menuItem.childs ? <a>{menuItem.description} <span
-                                                                                            className="icon">{arrowright}</span> </a> :
-                                                                                        <a>{menuItem.description}</a>}
-                                                                                    {menuItem.childs ?
-                                                                                        <SubMenuPanel>
-                                                                                            <ul className="lvn">
-                                                                                                {submenuslvl.map((menuItemlvl) => (
-                                                                                                    <Menu key={menuItemlvl.description}>
-                                                                                                        <li>
-                                                                                                                <a>{menuItemlvl.description}</a>
-                                                                                                        </li>
-                                                                                                    </Menu>
-                                                                                                ))
-                                                                                                }
-                                                                                            </ul>
-                                                                                        </SubMenuPanel> :
-                                                                                        null
-                                                                                    }
-                                                                                </li>
-                                                                            </Menu>
+                                                                    <div className="wrapper2">
+                                                                        <ul className="lvn lv3">
+                                                                            {submenus.map((menuItem) => (
+                                                                                <Menu key={menuItem.description}>
+                                                                                    <li onMouseOver={()=> getDatas(menuItem.key+"?url="+menuItem.url)}>
+                                                                                        {menuItem.childs ? <a>{menuItem.description} <span
+                                                                                                className="icon">{arrowright}</span> </a> :
+                                                                                            <a>{menuItem.description}</a>}
+                                                                                        {menuItem.childs ?
+                                                                                            <SubMenuPanel>
+                                                                                                <div className="wrapper3">
+                                                                                                    <ul className="lvn lv4">
+                                                                                                        {submenuslvl.map((menuItemlvl) => (
+                                                                                                            <Menu key={menuItemlvl.description}>
+                                                                                                                <li>
+                                                                                                                    <a>{menuItemlvl.description}</a>
+                                                                                                                </li>
+                                                                                                            </Menu>
+                                                                                                        ))
+                                                                                                        }
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                            </SubMenuPanel> :
+                                                                                            null
+                                                                                        }
+                                                                                    </li>
+                                                                                </Menu>
                                                                             ))
-                                                                        }
-                                                                    </ul>
+                                                                            }
+                                                                        </ul>
+                                                                    </div>
                                                                 </SubMenuPanel> :
                                                                 null
                                                             }
@@ -98,114 +103,91 @@ function MyComponent() {
                                                 ))
                                                 }
                                             </ul>
-                                        </SubMenuPanel> : null}
-                                </li>
-                            </Menu>
-                        ))}
-                    </ul>
-                    <style jsx>{`
+                                        </div>
+                                    </SubMenuPanel> : null}
+                            </li>
+                        </Menu>
+                    ))}
+                </ul>
+                <style jsx>{`
                       ul,
-                      li {
-                        list-style-type: none;
-                        padding: 0;
-                        margin: 0;
-                      }
+          li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
 
-                      ul.lv1 {
-                        position: absolute;
-                        clear: both;
-                        height: 40px;
-                        top: 40px;
-                        left: 0px;
-                        z-index: 100;
-                      }
+          ul.lv1 {
+            position: absolute;
+            clear: both;
+            height: 40px;
+            top: 40px;
+            left: 0px;
+            z-index: 100;
+          }
 
-                      ul.lv1 > li {
-                        float: left;
-                        width: auto;
-                        padding: 10px 20px;
-                        border: 1px solid blue;
-                        height: 40px;
-                        line-height: 40px;
-                        text-align: center;
-                        position: relative;
-                      }
+          ul.lv1 > li {
+            float: left;
+            width: auto;
+            padding: 10px 20px;
+            border: 1px solid blue;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            position: relative;
+          }
 
-                      ul.lvn {
-                        position: absolute;
-                        text-align: left;
-                        top: -1px;
-                        width: 300px;
-                        left: 300px;
-                        z-index: 1000;
-                        height: 500px;
-                      }
-                      
-                      ul.lvn li{background: #ccc; padding: 2px 20px;}
-                      ul.lvn li:hover{background: #999;}
+          ul.lvn {
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: 300px;
+            left: 300px;
+            z-index: 1000;
+            height: 500px;
+            clip-depth:2;
+          }
 
-                      ul.lv2 {
-                        top: 60px;
-                        left: 0px;
-                      }
+          ul.lvn li {
+            background: #ccc;
+            padding: 2px 20px;
+             position: static;
+          }
+          ul.lvn li:hover {
+            background: #999;
+          }
 
-                      ul.lvn > li a span.icon {
-                        float: right;
-                      }
-
-                      .menu {
-                        position: relative;
-                        top: 0;
-                        left: 0;
-                      }
+          ul.lv2 {
+            top: 60px;
+            left: 0px;
+            height: 500px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            position:static;
+          }
+          ul.lv3{position:static;overflow-y: scroll;
+            overflow-x: hidden;
+            } 
+            ul.lv4{position:static;overflow-y: scroll;
+            overflow-x: hidden;
+            } 
+          ul.lvn > li a span.icon {
+            float: right;
+          }
+          .wrapper{position:absolute;top:60px; left:0px;}
+          .wrapper2{position:absolute;top:0px; left:300px;}
+          .wrapper3{position:absolute;top:0px; left:300px;}
+          .menu {
+            position: relative;
+            top: 0;
+            left: 0;
+          }
                     `}</style>
-                </div>
-            </MenuAim>
-        );
+            </div>
+        </MenuAim>
+    );
 }
 
 
- export default MyComponent;
+export default MyComponent;
 
-// const HoverableDiv = ({ handleMouseOver, handleMouseOut }) => {
-//     return (
-//         <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-//             Hover Me
-//         </div>
-//     );
-// };
-//
-// const HoverText = () => {
-//     return (
-//         <div>
-//             Hovering right meow!
-//             <span role="img" aria-label="cat">
-//         🐱
-//       </span>
-//         </div>
-//     );
-// };
-//
-// const HoverExample = () => {
-//     const [isHovering, setIsHovering] = useState(false);
-//     const handleMouseOver = () => {
-//         setIsHovering(true);
-//     };
-//
-//     const handleMouseOut = () => {
-//         setIsHovering(false);
-//     };
-//
-//     return (
-//         <div>
-//             {/* Hover over this div to hide/show <HoverText /> */}
-//             <HoverableDiv
-//                 handleMouseOver={handleMouseOver}
-//                 handleMouseOut={handleMouseOut}
-//             />
-//             {isHovering && <HoverText />}
-//         </div>
-//     );
-// };
-//
-// export default HoverExample
