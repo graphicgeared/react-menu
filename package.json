@@ -17,5 +17,8 @@
     "react-multilevel-menu-aim": "^1.0.1",
     "react-redux": "^8.0.1",
     "redux": "^4.2.0"
-  }
+  },
+  "keywords": [],
+  "name": "react-menu",
+  "description": ""
 }
