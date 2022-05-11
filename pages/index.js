@@ -118,9 +118,8 @@ function MyComponent() {
                               ) : (
                                 <a>{submenu.description}</a>
                               )}
-                              {submenu.childs ? (
+                              {submenu.childs & submenus.length > 1 ? (
                                 <SubMenuPanel>
-                                  {submenus ? (
                                     <div className="wrapper2">
                                       <ul className="lvn lv3">
                                         {submenus.map((menuItem) => (
@@ -175,7 +174,6 @@ function MyComponent() {
                                         ))}
                                       </ul>
                                     </div>
-                                  ) : null}
                                 </SubMenuPanel>
                               ) : null}
                             </li>
