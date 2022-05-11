@@ -12,8 +12,17 @@ const auth_key = 'BearereyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJERVYifQ.
 function MyComponent() {
     const [submenus, setSubmenu] = useState([])
     const [submenuslvl, setSubmenulvl] = useState([])
+
+
+    var timeoutId;
+    var timeoutIds;
+
     const getData = (url) =>{
-        fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ url,{
+        if (!timeoutId) {
+            timeoutId = window.setTimeout(function() {
+                timeoutId = null;
+
+                fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ url,{
             method: "GET",
             headers: {
                 "Authorization": auth_key,
@@ -24,9 +33,14 @@ function MyComponent() {
         }).then(results => {
             setSubmenu(results.primaries)
         })
+            }, 1000);
+        }
     }
 
     const getDatas = (urls) =>{
+        if (!timeoutIds) {
+            timeoutIds = window.setTimeout(function() {
+                timeoutIds = null;
 
         fetch('https://uatgecmsus.systemax.com/catalogApis/catalog/feature/'+ urls,{
             method: "GET",
@@ -39,6 +53,29 @@ function MyComponent() {
         }).then(results => {
             setSubmenulvl(results.primaries)
         })
+            }, 1000);
+        }
+    }
+
+
+    const hovoutfirst = () =>{
+        if (timeoutId) {
+            window.clearTimeout(timeoutId);
+            timeoutId = null;
+        }
+        else {
+           return false
+        }
+    }
+
+    const hovoutsec = () =>{
+        if (timeoutIds) {
+            window.clearTimeout(timeoutIds);
+            timeoutIds = null;
+        }
+        else {
+            return false
+        }
     }
 
 
@@ -58,7 +95,7 @@ function MyComponent() {
                                             <ul className="lvn lv2">
                                                 {info.primaries.map((submenu) => (
                                                     <Menu key={submenu.description}>
-                                                        <li onMouseOver={()=> getData(submenu.key+"?url="+submenu.url)}>
+                                                        <li onMouseOver={()=> getData(submenu.key+"?url="+submenu.url)} onMouseOut={()=> hovoutfirst()}>
                                                             {submenu.childs ? <a>{submenu.description} <span
                                                                     className="icon">{arrowright}</span> </a> :
                                                                 <a>{submenu.description}</a>}
@@ -68,7 +105,7 @@ function MyComponent() {
                                                                         <ul className="lvn lv3">
                                                                             {submenus.map((menuItem) => (
                                                                                 <Menu key={menuItem.description}>
-                                                                                    <li onMouseOver={()=> getDatas(menuItem.key+"?url="+menuItem.url)}>
+                                                                                    <li onMouseOver={()=> getDatas(menuItem.key+"?url="+menuItem.url)} onMouseOut={()=> hovoutsec()}>
                                                                                         {menuItem.childs ? <a>{menuItem.description} <span
                                                                                                 className="icon">{arrowright}</span> </a> :
                                                                                             <a>{menuItem.description}</a>}
